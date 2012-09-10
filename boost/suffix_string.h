@@ -1,5 +1,5 @@
-#ifndef STRING_SUFFIX_H_
-#define STRING_SUFFIX_H_
+#ifndef SUFFIX_STRING_H_
+#define SUFFIX_STRING_H_
 #include <string>
 namespace boost{
 namespace suffixes{
@@ -39,7 +39,4 @@ return std::basic_string<char32_t>(str,len);
 }
 }
 }
-
-
-
-#endif /* STRING_SUFFIX_H_ */
+#endif

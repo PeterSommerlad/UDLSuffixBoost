@@ -1,5 +1,5 @@
-#ifndef BINARY_H_
-#define BINARY_H_
+#ifndef SUFFIX_BINARY_H
+#define SUFFIX_BINARY_H
 #include <limits>
 #include <type_traits>
 #include "select_int_type.h"
@@ -131,4 +131,4 @@ operator"" _bUll(){
 
 
 
-#endif /* BINARY_H_ */
+#endif

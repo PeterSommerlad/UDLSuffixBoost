@@ -1,5 +1,5 @@
-#ifndef SUFFIXESPARSENUMBERS_H_
-#define SUFFIXESPARSENUMBERS_H_
+#ifndef SUFFIX_PARSE_INT_H_
+#define SUFFIX_PARSE_INT_H_
 #include <cstddef>
 namespace boost {
 namespace suffixes {
@@ -170,4 +170,4 @@ struct parse_int<base,'F',Digits...>{
 }
 }
 }
-#endif /* SUFFIXESPARSENUMBERS_H_ */
+#endif

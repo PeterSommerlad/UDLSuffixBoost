@@ -1,5 +1,5 @@
-#ifndef COMPLEX_SUFFIX_H_
-#define COMPLEX_SUFFIX_H_
+#ifndef SUFFIX_COMPLEX_H_
+#define SUFFIX_COMPLEX_H_
 #include <complex>
 namespace boost{
 namespace suffixes{
@@ -57,4 +57,4 @@ std::complex<float> operator"" _fr(unsigned long long d){
 }
 
 
-#endif /* COMPLEX_SUFFIX_H_ */
+#endif

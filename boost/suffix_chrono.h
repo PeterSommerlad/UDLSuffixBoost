@@ -1,5 +1,5 @@
-#ifndef CHRONO_SUFFIX_H_
-#define CHRONO_SUFFIX_H_
+#ifndef SUFFIX_CHRONO_H_
+#define SUFFIX_CHRONO_H_
 #include <chrono>
 #include <limits>
 #include "suffix_parse_int.h"
@@ -80,4 +80,4 @@ constexpr std::chrono::duration<long double, std::ratio<1,1000000000>> operator"
 
 
 
-#endif /* CHRONO_SUFFIX_H_ */
+#endif
