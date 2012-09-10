@@ -2,7 +2,7 @@
 #define CHRONO_SUFFIX_H_
 #include <chrono>
 #include <limits>
-#include "suffixes_parse_integers.h"
+#include "suffix_parse_int.h"
 namespace boost {
 namespace suffixes {
 namespace chrono {
