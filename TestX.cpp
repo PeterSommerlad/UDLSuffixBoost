@@ -1,7 +1,7 @@
-#include "boost/suffix_parse_int.h"
-#include "boost/suffix_chrono.h"
-#include "boost/suffix_string.h"
-#include "boost/suffix_binary.h"
+#include "boost/suffixes/suffix_parse_int.h"
+#include "boost/suffixes/suffix_chrono.h"
+#include "boost/suffixes/suffix_string.h"
+#include "boost/suffixes/suffix_binary.h"
 
 #include "cute.h"
 #include "ide_listener.h"
