@@ -1,5 +1,5 @@
-#ifndef SUFFIX_COMPLEX_H_
-#define SUFFIX_COMPLEX_H_
+#ifndef BOOST_SUFFIXES_SUFFIX_COMPLEX_H_
+#define BOOST_SUFFIXES_SUFFIX_COMPLEX_H_
 #include <complex>
 namespace boost{
 namespace suffixes{

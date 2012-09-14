@@ -1,6 +1,8 @@
-#ifndef SUFFIX_STRING_H_
-#define SUFFIX_STRING_H_
+#ifndef BOOST_SUFFIXES_SUFFIX_STRING_H_
+#define BOOST_SUFFIXES_SUFFIX_STRING_H_
+
 #include <string>
+
 namespace boost{
 namespace suffixes{
 namespace string{

@@ -1,5 +1,7 @@
-#ifndef SELECT_INT_TYPE_H_
-#define SELECT_INT_TYPE_H_
+#ifndef BOOST_SUFFIXES_SELECT_INT_TYPE_HPP
+#define BOOST_SUFFIXES_SELECT_INT_TYPE_HPP
+
+//#include <boost/type_traits.hpp>
 #include <type_traits>
 #include <limits>
 
@@ -22,10 +24,10 @@ struct select_int_type<val,INTTYPE,INTS...>:std::conditional<
 template <unsigned long long val>
 struct select_int_type<val>{
     typedef unsigned long long type;
-    static type const value{  val };
+    static type const value =  val ;
 };
 
 }}}
 
 
-#endif /* SELECT_INT_TYPE_H_ */
+#endif /* BOOST_SUFFIXES_SELECT_INT_TYPE_HPP */

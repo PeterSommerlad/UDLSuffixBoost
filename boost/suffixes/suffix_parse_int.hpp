@@ -1,5 +1,5 @@
-#ifndef SUFFIX_PARSE_INT_H_
-#define SUFFIX_PARSE_INT_H_
+#ifndef BOOST_SUFFIXES_SUFFIX_PARSE_INT_H_
+#define BOOST_SUFFIXES_SUFFIX_PARSE_INT_H_
 #include <cstddef>
 namespace boost {
 namespace suffixes {
