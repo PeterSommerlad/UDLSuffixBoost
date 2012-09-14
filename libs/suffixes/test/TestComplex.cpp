@@ -1,4 +1,4 @@
-#include "boost/suffix_complex.h"
+#include "boost/suffixes/suffix_complex.h"
 #include "cute.h"
 #include "ide_listener.h"
 #include "cute_runner.h"
