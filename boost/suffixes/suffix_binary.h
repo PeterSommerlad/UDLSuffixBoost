@@ -2,7 +2,7 @@
 #define SUFFIX_BINARY_H
 #include <limits>
 #include <type_traits>
-#include "select_int_type.h"
+#include "boost/suffixes/select_int_type.h"
 namespace boost{
 namespace suffixes{
 namespace binary{
