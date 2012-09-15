@@ -1,0 +1,238 @@
+
+[/
+ / Copyright (c) 2012 Peter Sommerlad
+ / Copyright (c) 2012 Vicente J. Botet Escriba
+ /
+ / Distributed under the Boost Software License, Version 1.0. (See accompanying
+ / file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+ /]
+
+[library Toward Boost.Suffixes
+    [quickbook 1.5]
+    [version 0.1.0]
+    [authors [Sommerlad, Peter]]
+    [authors [Botet Escriba, Vicente J.]]
+    [copyright 2012 Peter Sommerlad]
+    [copyright 2012 Vicente J. Botet Escriba]
+    [category Utilities]
+    [id boost.suffixes]
+    [dirname suffixes]
+    [purpose C++11 User Defined Literals]
+    [license
+        Distributed under the Boost Software License, Version 1.0.
+        (See accompanying file LICENSE_1_0.txt or copy at
+        [@http://www.boost.org/LICENSE_1_0.txt])
+    ]
+]
+
+[warning Suffixes is not a part of the Boost libraries.]
+
+[/========================]
+[section Overview]
+[/========================]
+
+
+
+[/====================================]
+[heading How to Use This Documentation]
+[/====================================]
+
+
+This documentation makes use of the following naming and formatting conventions.
+
+* Code is in `fixed width font` and is syntax-highlighted.
+* Replaceable text that you will need to supply is in [~italics].
+* If a name refers to a free function, it is specified like this:
+  `free_function()`; that is, it is in code font and its name is followed by `()`   to indicate that it is a free function.
+* If a name refers to a class template, it is specified like this:   `class_template<>`; that is, it is in code font and its name is followed by `<>`   to indicate that it is a class template.
+* If a name refers to a function-like macro, it is specified like this: `MACRO()`;
+  that is, it is uppercase in code font and its name is followed by `()` to   indicate that it is a function-like macro. Object-like macros appear without the   trailing `()`.
+* Names that refer to /concepts/ in the generic programming sense are specified in CamelCase.
+
+[note In addition, notes such as this one specify non-essential information that provides additional background or rationale.]
+
+Finally, you can mentally add the following to any code fragments in this document:
+
+    // Include all of the core Suffixes files
+    #include <boost/suffixes.hpp>
+
+    using namespace boost::suffixes;
+
+[section Motivation]
+
+
+[endsect]
+[/==================]
+[section Description]
+[/==================]
+
+
+[endsect]
+[endsect]
+
+[/==============================]
+[section:users_guide Users' Guide]
+[/==============================]
+
+[/======================================]
+[section:getting_started Getting Started]
+[/======================================]
+
+[/======================================]
+[section:install Installing Boost.Suffixes]
+[/======================================]
+
+[/=================================]
+[heading Getting Boost.Suffixes]
+[/=================================]
+
+You can get the last stable release of [*Boost.Suffixes] by downloading [^suffixes.zip] from the
+[@https://github.com/PeterSommerlad/UDLSuffixBoost/downloads [*Boost.Suffixes]/Downloads]
+
+You can also access the latest (unstable?) state from the Git repository [@https://github.com/PeterSommerlad/UDLSuffixBoost PeterSommerlad/UDLSuffixBoost].
+
+[/=================================]
+[heading Building Boost.Suffixes]
+[/=================================]
+
+There is no need to compile [*Boost.Suffixes], since it's a header only library. Just include your Boost header directory in your compiler include path.
+
+[/=========================]
+[heading Requirements]
+[/=========================]
+
+
+[*Boost.Suffixes] depends on Boost.Config and all libraries they depends on.
+
+[/========================]
+[heading Exceptions safety]
+[/========================]
+
+All functions in the library are exception-neutral and provide strong guarantee of exception safety as long as the underlying parameters provide it.
+
+[/====================]
+[heading Thread safety]
+[/====================]
+
+All functions in the library are thread-unsafe except when noted explicitly.
+
+[/=======================]
+[heading Tested compilers]
+[/=======================]
+
+The implementation will eventually work with C++11 conforming compilers supporting User Defined Literals.
+Current version has been tested on:
+
+
+Darwin 10 - Lion 
+
+* GCC 4.7.1 -std=C++11
+
+[note Please let us know how this works on other platforms/compilers.]
+
+[note Please send any questions, comments and bug reports to boost <at> lists <dot> boost <dot> org.]
+
+[endsect]
+[/=============================]
+[section Hello World! ]
+[/=============================]
+
+
+[endsect]
+
+[endsect]
+
+[section:tutorial Tutorial]
+[/========================]
+[endsect]
+
+[section:examples Examples]
+[/========================]
+[endsect]
+
+
+
+[section:ext_references External Resources]
+
+[variablelist
+[
+    [[@http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/nXXX.pdf [*NXXX: XXXX]]]
+    [Peter Somerlad]
+]
+
+]
+
+[endsect]
+
+[endsect]
+
+[section Reference]
+
+[/xinclude ref.xml]
+
+[endsect]
+
+[/=================]
+[section Appendices]
+[/=================]
+
+[section:history Appendix: History]
+
+[section [*Version 0.1.0, MMM DD, 2012] ]
+
+Initial version committed on the sandbox
+
+[*Features:]
+
+
+[endsect]
+[endsect]
+
+[section:rationale Appendix: Design Rationale]
+
+[endsect]
+
+[section:implementation Appendix: Implementation Notes]
+
+[endsect]
+[section:acknowledgements Appendix: Acknowledgements]
+
+
+[endsect]
+
+[/=====================================]
+[section:todo  Appendix: Future plans]
+[/=====================================]
+
+[heading Tasks to do before review]
+
+* 
+
+
+[endsect]
+[endsect]
+
+[/ //////////////////////
+[section:indexes Indexes]
+
+[? enable_index
+'''
+  <index/>
+
+  <index type="function_name">
+  <title>Function Index</title>
+  </index>
+  
+  <index type="class_name">
+  <title>Class Index</title>
+  </index>
+  
+  <index type="typedef_name">
+  <title>Typedef Index</title>
+  </index>
+'''
+]
+[endsect] [/section:indexes Indexes]
+][/ ///////////////////////////////]
+
+

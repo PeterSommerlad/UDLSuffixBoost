@@ -1,4 +1,6 @@
 
 ws/
-
 .DS_Store
+bin/
+html/
+.project
