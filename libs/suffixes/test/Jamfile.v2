@@ -52,8 +52,22 @@ project
         :
 
         [ run TestBinary.cpp ]
+
+        ;
+
+   test-suite "string"
+        :
+
         [ run TestString.cpp ]
+
+        ;
+
+
+   test-suite "chrono"
+        :
+
         [ run TestChrono.cpp ]
+        [ run TestBoostChrono.cpp : :  ]
 
         ;
 

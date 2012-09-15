@@ -1,3 +1,15 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// (C) Copyright Peter Sommerlad 2012.
+// (C) Copyright Vicente J. Botet Escriba 2012.
+//
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+//
+// See http://www.boost.org/libs/suffixes for documentation.
+//
+//////////////////////////////////////////////////////////////////////////////
+
 #include <boost/suffixes/suffix_parse_int.hpp>
 #include <boost/suffixes/suffix_string.hpp>
 
