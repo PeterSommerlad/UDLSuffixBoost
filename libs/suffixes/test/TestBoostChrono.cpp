@@ -53,9 +53,9 @@ void aTestForDuration(){
 	constexpr auto   x=5_h;
 	static auto  y=18000_s;
 	auto z=x;
-	//auto w=5_h; // linker failure due to missing linkage of constant ::value ???
-	// FAILS
-	BOOST_TEST(x==y);
+	auto w=5_h;
+  BOOST_TEST(x==y);
+  BOOST_TEST(x==w);
 	BOOST_TEST(z==y);
 
 }
