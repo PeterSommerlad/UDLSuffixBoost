@@ -19,32 +19,33 @@
 #include <typeinfo>
 
 #include <boost/detail/lightweight_test.hpp>
+#define BOOST_ASSERT_EQ(A,B) static_assert((A)==(B),"")
 
 using namespace boost::suffixes::binary;
 
 void testBinaryInt() {
 	// compile error:
 	//2b;
-	BOOST_TEST_EQ(10_b,2);
+	BOOST_ASSERT_EQ(10_b,2);
 	BOOST_TEST(typeid(int) == typeid(10_b));
 	// all suffixes
-	BOOST_TEST_EQ(10_bu,2u);
+  BOOST_ASSERT_EQ(10_bu,2u);
 	BOOST_TEST(typeid(unsigned) == typeid(10_bu));
-	BOOST_TEST_EQ(10_bl,2l);
+	BOOST_ASSERT_EQ(10_bl,2l);
 	BOOST_TEST(typeid(long) == typeid(10_bl));
-	BOOST_TEST_EQ(10_bul,2ul);
+	BOOST_ASSERT_EQ(10_bul,2ul);
 	BOOST_TEST(typeid(unsigned long) == typeid(10_bul));
-	BOOST_TEST_EQ(10_bll,2ll);
+	BOOST_ASSERT_EQ(10_bll,2ll);
 	BOOST_TEST(typeid(long long) == typeid(10_bll));
-	BOOST_TEST_EQ(10_bull,2ull);
+	BOOST_ASSERT_EQ(10_bull,2ull);
 	BOOST_TEST(typeid(unsigned long long) == typeid(10_bull));
 
 }
 void testWithblSuffix() {
-	BOOST_TEST_EQ(100_bl, 4l);
+	BOOST_ASSERT_EQ(100_bl, 4l);
 }
 void testWithbuSuffix() {
-	BOOST_TEST_EQ(100_bu, 4u);
+	BOOST_ASSERT_EQ(100_bu, 4u);
 	BOOST_TEST_EQ(typeid(unsigned).name(),
 			typeid(1_bu).name());
 	BOOST_TEST_EQ(typeid(unsigned long).name(),
@@ -65,8 +66,8 @@ struct select_ull<8>{
 };
 
 void testTypeSelector() {
-	BOOST_TEST_EQ(100_b, 4);
-	BOOST_TEST_EQ(4u, sizeof(int));
+  BOOST_ASSERT_EQ(100_b, 4);
+  BOOST_ASSERT_EQ(4u, sizeof(int));
 	BOOST_TEST_EQ(typeid(int).name(),
 			typeid(
 01111111111111111111111111111111_b).name());
@@ -149,12 +150,12 @@ constexpr auto three= 010_ternary;
 static_assert(three==3, "_ternary should be three-based");
 //constexpr auto invalid=3_ternary;
 //constexpr auto invalid = 0x_testit;
-BOOST_TEST_EQ(123ULL, atest);
-BOOST_TEST_EQ(0123ull, a);
-BOOST_TEST_EQ(0x123ull, b);
-BOOST_TEST_EQ(01234567ull, 01234567_testit);
-BOOST_TEST_EQ(0x1234567890abcdefULL, 0x1234567890ABCDEF_testit);
-BOOST_TEST_EQ(0x1234567890abcdefULL, 0x1234567890abcdef_testit);
+BOOST_ASSERT_EQ(123ULL, atest);
+BOOST_ASSERT_EQ(0123ull, a);
+BOOST_ASSERT_EQ(0x123ull, b);
+BOOST_ASSERT_EQ(01234567ull, 01234567_testit);
+BOOST_ASSERT_EQ(0x1234567890abcdefULL, 0x1234567890ABCDEF_testit);
+BOOST_ASSERT_EQ(0x1234567890abcdefULL, 0x1234567890abcdef_testit);
 }
 
 
