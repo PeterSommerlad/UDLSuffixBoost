@@ -19,15 +19,16 @@
 #include <typeinfo>
 
 #include <boost/detail/lightweight_test.hpp>
+#define BOOST_ASSERT_EQ(A,B) static_assert((A)==(B),"")
 
 using namespace boost::suffixes::chrono;
 
+
 void testSecondOperator(){
-	// FAILS
   // static_assert(std::is_same<std::chrono::hours::rep, int>::value,"hours are too long to check");
 	//constexpr auto overflowh= 0x80000000h; // compile error!
 	constexpr auto xh=5_h;
-	BOOST_TEST_EQ(std::chrono::hours{5}.count(),xh.count());
+	BOOST_ASSERT_EQ(std::chrono::hours{5}.count(),xh.count());
 	static_assert(std::chrono::hours{5}==xh,"chrono suffix hours");
 	constexpr auto xmin=0x5_min;
 	static_assert(std::chrono::duration<unsigned long long, std::ratio<60,1>>{5}==xmin,"chrono suffix min");

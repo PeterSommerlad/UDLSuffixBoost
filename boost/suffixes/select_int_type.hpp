@@ -29,14 +29,14 @@ struct select_int_type<val,INTTYPE,INTS...>:std::conditional<
     val<=static_cast<unsigned long long>(std::numeric_limits<INTTYPE>::max())
     ,INTTYPE
     ,typename select_int_type<val,INTS...>::type >{
-    static typename select_int_type::type const
+    static typename select_int_type::type constexpr
         value{ static_cast<typename select_int_type::type>(val) };
 };
 
 template <unsigned long long val>
 struct select_int_type<val>{
     typedef unsigned long long type;
-    static type const value{ val } ;
+    static type constexpr value{ val } ;
 };
 
 }}}

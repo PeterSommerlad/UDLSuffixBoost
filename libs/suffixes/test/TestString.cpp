@@ -19,6 +19,7 @@
 #include <typeinfo>
 
 #include <boost/detail/lightweight_test.hpp>
+#define BOOST_ASSERT_EQ(A,B) static_assert((A)==(B),"")
 
 
 //-------------- string UDL
@@ -30,8 +31,8 @@ static_assert(std::is_same<decltype(u"hallo"_s),std::u16string>{},"u s means std
 static_assert(std::is_same<decltype(U"hallo"_s),std::u32string>{},"U s means std::u32string");
 
 void testStringSuffix(){
-	BOOST_TEST_EQ(typeid("hi"_s).name(),typeid(std::string).name());
-	BOOST_TEST_EQ(std::string{"hello"},"hello"_s);
+       BOOST_TEST_EQ(typeid("hi"_s).name(),typeid(std::string).name());
+       BOOST_TEST_EQ(std::string{"hello"},"hello"_s);
 }
 template <char... Digits>
 constexpr  unsigned long long

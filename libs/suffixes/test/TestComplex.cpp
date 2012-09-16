@@ -17,6 +17,7 @@
 #include <typeinfo>
 
 #include <boost/detail/lightweight_test.hpp>
+#define BOOST_ASSERT_EQ(A,B) static_assert((A)==(B),"")
 
 using namespace boost::suffixes::complex;
 
