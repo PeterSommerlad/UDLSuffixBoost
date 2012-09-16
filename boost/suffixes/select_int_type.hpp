@@ -36,7 +36,7 @@ struct select_int_type<val,INTTYPE,INTS...>:std::conditional<
 template <unsigned long long val>
 struct select_int_type<val>{
     typedef unsigned long long type;
-    static type const value =  val ;
+    static type const value{ val } ;
 };
 
 }}}

@@ -22,6 +22,8 @@
 
 using namespace boost::suffixes::chrono;
 
+
+namespace{
 void testSecondOperator(){
 	// FAILS
   // static_assert(std::is_same<boost::chrono::hours::rep, int>::value,"hours are too long to check");
@@ -48,13 +50,16 @@ void testSecondOperator(){
 	constexpr auto dns=0.5_ns;
 }
 void aTestForDuration(){
-	auto  x=5_h;
-	auto y=18000_s;
+	constexpr auto   x=5_h;
+	static auto  y=18000_s;
+	auto z=x;
+	//auto w=5_h; // linker failure due to missing linkage of constant ::value ???
 	// FAILS
 	BOOST_TEST(x==y);
+	BOOST_TEST(z==y);
 
 }
-
+}
 int main()
 {
 

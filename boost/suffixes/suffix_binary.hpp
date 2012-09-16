@@ -16,7 +16,6 @@
 #include <limits>
 #include <type_traits>
 #include <boost/suffixes/select_int_type.hpp>
-
 namespace boost{
 namespace suffixes{
 namespace binary{
@@ -26,7 +25,7 @@ template <char... Digits>
 struct bitsImpl{
 	static_assert(! sizeof...(Digits),
 			"binary literal digits must be 0 or 1");
-	static constexpr unsigned long long value=0;
+	static constexpr unsigned long long value{ 0 };
 };
 
 template <char... Digits>
