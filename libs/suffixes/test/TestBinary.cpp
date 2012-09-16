@@ -28,15 +28,15 @@ void testBinaryInt() {
 	BOOST_TEST_EQ(10_b,2);
 	BOOST_TEST(typeid(int) == typeid(10_b));
 	// all suffixes
-	BOOST_TEST_EQ(10_bu,2);
+	BOOST_TEST_EQ(10_bu,2u);
 	BOOST_TEST(typeid(unsigned) == typeid(10_bu));
-	BOOST_TEST_EQ(10_bl,2);
+	BOOST_TEST_EQ(10_bl,2l);
 	BOOST_TEST(typeid(long) == typeid(10_bl));
-	BOOST_TEST_EQ(10_bul,2);
+	BOOST_TEST_EQ(10_bul,2ul);
 	BOOST_TEST(typeid(unsigned long) == typeid(10_bul));
-	BOOST_TEST_EQ(10_bll,2);
+	BOOST_TEST_EQ(10_bll,2ll);
 	BOOST_TEST(typeid(long long) == typeid(10_bll));
-	BOOST_TEST_EQ(10_bull,2);
+	BOOST_TEST_EQ(10_bull,2ull);
 	BOOST_TEST(typeid(unsigned long long) == typeid(10_bull));
 
 }
@@ -65,8 +65,8 @@ struct select_ull<8>{
 };
 
 void testTypeSelector() {
-	BOOST_TEST_EQ(100_b, 4l);
-	BOOST_TEST_EQ(4, sizeof(int));
+	BOOST_TEST_EQ(100_b, 4);
+	BOOST_TEST_EQ(4u, sizeof(int));
 	BOOST_TEST_EQ(typeid(int).name(),
 			typeid(
 01111111111111111111111111111111_b).name());
@@ -150,11 +150,11 @@ static_assert(three==3, "_ternary should be three-based");
 //constexpr auto invalid=3_ternary;
 //constexpr auto invalid = 0x_testit;
 BOOST_TEST_EQ(123ULL, atest);
-BOOST_TEST_EQ(0123, a);
-BOOST_TEST_EQ(0x123, b);
-BOOST_TEST_EQ(01234567, 01234567_testit);
-BOOST_TEST_EQ(0x1234567890abcdef, 0x1234567890ABCDEF_testit);
-BOOST_TEST_EQ(0x1234567890abcdef, 0x1234567890abcdef_testit);
+BOOST_TEST_EQ(0123ull, a);
+BOOST_TEST_EQ(0x123ull, b);
+BOOST_TEST_EQ(01234567ull, 01234567_testit);
+BOOST_TEST_EQ(0x1234567890abcdefULL, 0x1234567890ABCDEF_testit);
+BOOST_TEST_EQ(0x1234567890abcdefULL, 0x1234567890abcdef_testit);
 }
 
 

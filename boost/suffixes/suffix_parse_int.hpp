@@ -21,7 +21,7 @@ template <unsigned base, char... Digits>
 struct parse_int{
     static_assert(base<=16u,"only support up to hexadecimal");
     static_assert(! sizeof...(Digits), "invalid integral constant");
-    static constexpr unsigned long long value=0;
+    static constexpr unsigned long long value{ 0 };
 };
 
 template <char... Digits>
