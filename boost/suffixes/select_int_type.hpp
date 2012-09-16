@@ -1,5 +1,19 @@
-#ifndef SELECT_INT_TYPE_H_
-#define SELECT_INT_TYPE_H_
+//////////////////////////////////////////////////////////////////////////////
+//
+// (C) Copyright Peter Sommerlad 2012.
+// (C) Copyright Vicente J. Botet Escriba 2012.
+//
+// Distributed under the Boost Software License, Version 1.0.
+// (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+//
+// See http://www.boost.org/libs/suffixes for documentation.
+//
+//////////////////////////////////////////////////////////////////////////////
+
+#ifndef BOOST_SUFFIXES_SELECT_INT_TYPE_HPP
+#define BOOST_SUFFIXES_SELECT_INT_TYPE_HPP
+
+//#include <boost/type_traits.hpp>
 #include <type_traits>
 #include <limits>
 
@@ -22,10 +36,10 @@ struct select_int_type<val,INTTYPE,INTS...>:std::conditional<
 template <unsigned long long val>
 struct select_int_type<val>{
     typedef unsigned long long type;
-    static type const value{  val };
+    static type const value =  val ;
 };
 
 }}}
 
 
-#endif /* SELECT_INT_TYPE_H_ */
+#endif /* BOOST_SUFFIXES_SELECT_INT_TYPE_HPP */
